@@ -13,7 +13,7 @@ tags: [nginx]
 
 ## 11个Phase如图
 
-!["nginx处理http请求的11个阶段"](/img/nginx11phase.png)
+!["nginx处理http请求的11个阶段"](./image/nginx11phase.png)
 
 红色是与REWRITE相关的几个阶段
 
