@@ -59,9 +59,9 @@ stops processing the current set of ngx_http_rewrite_module directives and start
 
 stops processing the current set of ngx_http_rewrite_module directives as with the break directive;
 
-如果匹配的URI，rewrite在server块中，并且last做为break，匹配到此rewrite URI时，不再向下匹配server块中的rewrite，进而继续下面location URI的查找匹配；
+如果匹配的URI，rewrite在server块中，并且break做为flag，匹配到此rewrite URI时，不再向下匹配server块中的rewrite，进而继续下面location URI的查找匹配；
 
-如果匹配的URI，rewrite在location块中，last做为break，匹配到此rewrite时，不会跳出此location块，而是继续对location块下面的语句继续运行，不会跳出此location块，并且也不会匹配location 块下面的rewrite；
+如果匹配的URI，rewrite在location块中，break做为flag，匹配到此rewrite时，不会跳出此location块，而是继续对location块下面的语句继续运行，不会跳出此location块，并且也不会匹配location 块下面的rewrite；
 
 完成该rewrite规则的执行后，停止处理后续rewrite指令集，并不再重新查找；但是当前location内剩余非rewrite语句和location外的的非rewrite语句可以执行；
 
